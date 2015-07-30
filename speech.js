@@ -146,7 +146,9 @@ var Speech = (function (undefined) {
 
             // avoid some redundancy
             if (transcript === self.lastResult && !updatedResult.isFinal) return
-            if (transcript.length < self.lastResult.length) return
+            // Commenting out because saying something like "two dollars" results in
+            // A shortening of the length (converts it to "$2")
+            //if (transcript.length < self.lastResult.length) return
 
             self.lastResult = transcript
 
